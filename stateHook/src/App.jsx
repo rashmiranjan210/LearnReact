@@ -1,25 +1,23 @@
-import { useState,useEffect } from 'react'
+import { useState,useEffect,useRef } from 'react'
 import './App.css'
 import Navabar from './components/Navabar'
 
 function App() {
   const [count, setCount] = useState(10)
+  const a=useRef(0)
   useEffect(() => {
-    alert("hey welcome to my page") 
+    a.current=a.current+1
+    console.log(`hey welcome to my page ${a.current}`) 
+  },);
 
-  }, [])
-
-  useEffect(() => {
-    alert("hey count was changed") 
-     
-  }, [count])
+ 
   
 
   return (
     <>
-    <Navabar color={"cyan" + "blue"}/>
+    /
      <div>the count is {count}</div>
-     <button onClick={()=>setCount(count**2)}>uh</button>
+     <button onClick={()=>setCount(count+1)}>uh</button>
     </>
   )
 }
