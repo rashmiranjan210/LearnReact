@@ -1,0 +1,14 @@
+
+div{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  overflow: hidden;
+
+}
+.card{
+  border: 1px solid blueviolet;
+  height: 30vh;
+  width: 50vh;
+ flex-wrap: wrap;
+}
