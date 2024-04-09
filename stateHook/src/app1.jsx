@@ -4,10 +4,10 @@ import Navabar from './components/Navabar'
 
 function App() {
   const [count, setCount] = useState(10)
-  const btnref=useRef()
+  const a=useRef(0)
   useEffect(() => {
-    console.log(`first render`) 
-    btnref.current.style.backgroundColor="red"
+    a.current=a.current+1
+    console.log(`hey welcome to my page ${a.current}`) 
   },);
 
  
@@ -17,8 +17,7 @@ function App() {
     <>
     /
      <div>the count is {count}</div>
-     <button ref={btnref} onClick={()=>setCount(count+1)}>uh</button>
-     <button onClick={()=>btnref.current.style.display="none"}>off</button>
+     <button onClick={()=>setCount(count+1)}>uh</button>
     </>
   )
 }
